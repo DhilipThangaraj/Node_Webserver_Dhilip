@@ -19,7 +19,8 @@ weatherForm.addEventListener("submit", e => {
       if (data.error) {
         msg1.textContent = data.error;
       } else {
-        msg2.textContent = data.location + " . " + data.forecast.summary;
+        msg2.textContent = `${data.location}. There high temperature is ${data.forecast.tempHigh}C and with
+        the low of ${data.forecast.tempLow}C.Overall summary is ${data.forecast.summary}.`;
       }
     });
   });

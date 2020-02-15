@@ -36,7 +36,9 @@ const forecast = (latitude, longitude, callback) => {
       callback(undefined, {
         precipProbability: body.currently.precipProbability,
         summary: body.daily.data[0].summary,
-        temperature: body.currently.temperature
+        temperature: body.currently.temperature,
+        tempHigh: body.daily.data[0].temperatureHigh,
+        tempLow: body.daily.data[0].temperatureLow
       });
     }
   });
